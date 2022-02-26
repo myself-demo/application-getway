@@ -9,6 +9,12 @@ gen-order-service-api:
     -I ./proto/order-service-api \
     ./proto/order-service-api/*.proto
 
+	protoc \
+    --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+    --ts_out=./pb/order-service-api/ \
+    -I ./proto/order-service-api \
+    ./proto/order-service-api/*.proto
+
 gen-user-service-api:
 	mkdir -p ./pb/user-service-api/
 	grpc_tools_node_protoc \
@@ -18,12 +24,24 @@ gen-user-service-api:
     -I ./proto/user-service-api \
     ./proto/user-service-api/*.proto
 
+	protoc \
+    --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+    --ts_out=./pb/user-service-api/ \
+    -I ./proto/user-service-api \
+    ./proto/user-service-api/*.proto
+
 gen-wallet-service-api:
 	mkdir -p ./pb/wallet-service-api/
 	grpc_tools_node_protoc \
     --js_out=import_style=commonjs,binary:./pb/wallet-service-api/ \
     --grpc_out=./pb/wallet-service-api/ \
     --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` \
+    -I ./proto/wallet-service-api \
+    ./proto/wallet-service-api/*.proto
+
+	protoc \
+    --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+    --ts_out=./pb/wallet-service-api/ \
     -I ./proto/wallet-service-api \
     ./proto/wallet-service-api/*.proto
 

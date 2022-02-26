@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('@grpc/grpc-js');
+var grpc = require('grpc');
 var service_pb = require('./service_pb.js');
 var model_pb = require('./model_pb.js');
 var common_pb = require('./common_pb.js');

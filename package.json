@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/myself-demo/application-getway/issues"
   },
-  "homepage": "https://github.com/myself-demo/application-getway#readme"
+  "homepage": "https://github.com/myself-demo/application-getway#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.7",
+    "google-protobuf": "^3.19.4"
+  }
 }

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package order;
+option go_package = "github.com/myself-demo/order-service-api/pb;pb";
+
+
+message Order{
+  string orderId = 1;
+  string userId = 2;
+  string productName = 3;
+  double payMoney = 4;
+  uint64 orderTime = 5;
+}

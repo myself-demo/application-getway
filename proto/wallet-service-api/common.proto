@@ -1,0 +1,12 @@
+syntax = "proto3";
+package common;
+option go_package = "github.com/myself-demo/wallet-service-api/pb;pb";
+option java_package = "com.github.myself_demo.wallet_service_api.pb";
+option java_multiple_files = false;
+option java_outer_classname = "Common";
+
+
+message HandleResult{
+  int64 code = 1;
+  string  message = 2;
+}

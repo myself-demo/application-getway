@@ -1,0 +1,24 @@
+syntax = "proto3";
+package wallet;
+option go_package = "github.com/myself-demo/wallet-service-api/pb;pb";
+option java_package = "com.github.myself_demo.wallet_service_api.pb";
+option java_multiple_files = false;
+option java_outer_classname = "Service";
+
+import "model.proto";
+import "common.proto";
+
+message QueryWalletRequest{
+  string userId = 1;
+  string coinTypeId = 2;
+}
+message QueryWalletResult{
+  common.HandleResult handleResult = 1;
+  optional Wallet wallet = 2;
+}
+
+
+service WalletService{
+  rpc queryWallet(QueryWalletRequest)returns(QueryWalletResult){}
+}
+

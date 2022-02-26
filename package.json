@@ -2,9 +2,9 @@
   "name": "application-getway",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc --skipLibCheck",
+    "start": "npx tsc --skipLibCheck && node ./dist/main.js"
   },
   "repository": {
     "type": "git",
